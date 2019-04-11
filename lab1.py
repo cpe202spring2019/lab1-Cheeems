@@ -21,6 +21,8 @@ def reverse_rec(int_list):   # must use recursion
         raise ValueError
     if (len(int_list) == 1):
         return int_list
+    if len(int_list) == 0:
+        return []
     else:
         return [int_list[-1]] + reverse_rec(int_list[:-1])
 

@@ -26,14 +26,15 @@ class TestLab1(unittest.TestCase):
         self.assertEqual(reverse_rec([1,2,3]),[3,2,1])
         self.assertEqual(reverse_rec([1,5,1,3]),[3,1,5,1])
         self.assertEqual(reverse_rec([1,10,10,19,3]),[3,19,10,10,1])
+        self.assertEqual(reverse_rec([1]),[1]) 
+        self.assertEqual(reverse_rec([]),[])  
 
     
     def test_revrec_1(self):
         """test if list is None"""
         tlist = None
         with self.assertRaises(ValueError):  # used to check for exception
-            reverse_rec(tlist)
-
+            reverse_rec(tlist)                                          
 
     def test_bin_search(self):
         list_val =[0,1,2,3,4,7,8,9,10]
